@@ -21,6 +21,14 @@ def load_data(path):
     df = pd.read_csv(path)
     return df
 
+# Add custom CSS to hide the GitHub icon
+hide_github_icon = """
+#GithubIcon {
+  visibility: hidden;
+}
+"""
+st.markdown(hide_github_icon, unsafe_allow_html=True)
+
 mastodon_final_nodup = load_data(path="./data/mastodon_final_nodup.csv")
 mastodon_final = deepcopy(mastodon_final_nodup)
 
