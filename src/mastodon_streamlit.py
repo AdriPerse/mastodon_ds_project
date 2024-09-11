@@ -26,8 +26,8 @@ st.markdown(
     """
     <style>
         /* This will hide the GitHub button */
-        header > div:nth-of-type(3) > div {
-            visibility: hidden;
+        div[data-testid="stActionButtonIcon"] {
+            display: none;
         }
     </style>
     """,
